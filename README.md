@@ -1,6 +1,7 @@
 # GitHub Action for Factorio Mod Release
 
-This action will upload you Mod to the [Factorio Mod Portal](https://mods.factorio.com/)
+This action will upload the latest release of your mod to the [Factorio Mod Portal](https://mods.factorio.com/)
+You need to perform the initial upload to the portal manually to register the mod's metadata.
 
 ## Sample Workflow
 
@@ -20,7 +21,6 @@ A sample workflow that uses this action can be found at [nicolas-lang/Factorio.M
 
 Factorio build scripts based on:
 
-- [Roang-zero1 actions](https://github.com/Roang-zero1)
-- [Nexelas Mods](https://github.com/Nexela)
-- [GitHub Action to automatically publish to the Factorio mod portal](https://github.com/shanemadden/factorio-mod-portal-publish)
-- Shane Madden (Nymbia)
+- [Roang-zero1](https://github.com/Roang-zero1)
+- [Nexelas](https://github.com/Nexela)
+- [Shane Madden](https://github.com/shanemadden)
