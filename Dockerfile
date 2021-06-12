@@ -1,11 +1,12 @@
-FROM alpine:3.9.3
+FROM python:3
 
-LABEL "repository"="https://github.com/Roang-zero1/factorio-create-release-action"
-LABEL "homepage"="https://github.com/Roang-zero1/factorio-create-release-action"
-LABEL "maintainer"="Roang_zero1 <lucas@brandstaetter.tech>"
+LABEL "repository"="https://github.com/nicolas-lang/factorio-create-release-action"
+LABEL "homepage"="https://github.com/nicolas-lang/factorio-create-release-action"
+LABEL "maintainer"="Nicolas Lang"
 
-RUN apk add --no-cache curl jq
+COPY requirements.txt /requirements.txt
+RUN pip install --no-cache-dir -r /requirements.txt
 
-COPY entrypoint.sh /entrypoint.sh
+COPY *.py /
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT [ "python3", "/entrypoint.py"]

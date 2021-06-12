@@ -4,7 +4,7 @@ This action will upload you Mod to the [Factorio Mod Portal](https://mods.factor
 
 ## Sample Workflow
 
-A sample workflow that uses this action can be found at [Roang-zero1/factorio-mod-actions](https://github.com/Roang-zero1/factorio-mod-actions/blob/master/sample/push-check-release.yml)
+A sample workflow that uses this action can be found at <ToDo>
 
 ## Inputs
 
@@ -20,6 +20,7 @@ A sample workflow that uses this action can be found at [Roang-zero1/factorio-mo
 
 Factorio build scripts based on:
 
+- [Roang-zero1 actions](https://github.com/Roang-zero1)
 - [Nexelas Mods](https://github.com/Nexela)
 - [GitHub Action to automatically publish to the Factorio mod portal](https://github.com/shanemadden/factorio-mod-portal-publish)
 - Shane Madden (Nymbia)
