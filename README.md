@@ -4,7 +4,7 @@ This action will upload you Mod to the [Factorio Mod Portal](https://mods.factor
 
 ## Sample Workflow
 
-A sample workflow that uses this action can be found at <ToDo>
+A sample workflow that uses this action can be found at [nicolas-lang/Factorio.ModTemplate](https://github.com/nicolas-lang/Factorio.ModTemplate)
 
 ## Inputs
 
