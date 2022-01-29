@@ -30,7 +30,7 @@ print("Environment set up successfully, running on ref: %s" % GITHUB_REF)
 # ------------------------------------------------------------------------------- #
 # 	Ensure we are on a tagged push
 # ------------------------------------------------------------------------------- #
-tag_pattern = re.compile(r"^refs\/tags\/(?P<major>\d)+\.(?P<minor>\d)+\.(?P<build>\d)+$")
+tag_pattern = re.compile(r"^refs\/tags\/(?P<major>\d+)\.(?P<minor>\d+)\.(?P<build>\d+)$")
 tag_match = tag_pattern.match(GITHUB_REF)
 if tag_match:
 	mod_version = tag_match.groupdict()
