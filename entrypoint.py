@@ -3,7 +3,7 @@ import os.path
 import re
 import json
 
-from factorioModPortal import factorioModPortal
+from factorioModPortal import FactorioModPortal
 # ------------------------------------------------------------------------------- #
 class factorioModDeploymentError(RuntimeError):
 	'''Custom Error representing issues with the mod deployment'''
@@ -68,6 +68,6 @@ print("%s found, filesize is %d bytes" % (modinfo_filepath, modinfo_filesize))
 # ------------------------------------------------------------------------------- #
 # 	Access Mod Portal and deploy
 # ------------------------------------------------------------------------------- #
-portal = factorioModPortal(FACTORIO_APIKEY)
+portal = FactorioModPortal(FACTORIO_APIKEY)
 # Start deployment to mod-portal
 portal.upload_mod(modinfo_name, modinfo_filepath)
