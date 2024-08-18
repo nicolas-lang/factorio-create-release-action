@@ -4,13 +4,9 @@ import re
 import json
 
 from factorioModPortal import factorioModPortal
-
 # ------------------------------------------------------------------------------- #
-
-
 class factorioModDeploymentError(RuntimeError):
 	'''Custom Error representing issues with the mod deployment'''
-
 
 # ------------------------------------------------------------------------------- #
 # 	Set up Env
@@ -19,12 +15,9 @@ class factorioModDeploymentError(RuntimeError):
 GITHUB_REPOSITORY_OWNER = os.environ['GITHUB_REPOSITORY_OWNER']
 GITHUB_REPOSITORY = os.environ['GITHUB_REPOSITORY']
 print("Starting Deployment for : %s" % (GITHUB_REPOSITORY))
-FACTORIO_USER = os.environ['INPUT_FACTORIO_USER']
-FACTORIO_PASSWORD = os.environ['INPUT_FACTORIO_PASSWORD']
-if FACTORIO_USER.isspace() or len(FACTORIO_USER) == 0:
-	raise factorioModDeploymentError("Factorio user is required for deployment")
-if FACTORIO_PASSWORD.isspace() or len(FACTORIO_PASSWORD) == 0:
-	raise factorioModDeploymentError("Factorio password is required for deployment")
+FACTORIO_APIKEY = os.environ['MOD_UPLOAD_API_KEY']
+if FACTORIO_APIKEY.isspace() or len(FACTORIO_APIKEY) == 0:
+	raise factorioModDeploymentError("Factorio API key is required for deployment")
 GITHUB_REF = os.environ['GITHUB_REF']
 print("Environment set up successfully, running on ref: %s" % GITHUB_REF)
 # ------------------------------------------------------------------------------- #
@@ -75,10 +68,6 @@ print("%s found, filesize is %d bytes" % (modinfo_filepath, modinfo_filesize))
 # ------------------------------------------------------------------------------- #
 # 	Access Mod Portal and deploy
 # ------------------------------------------------------------------------------- #
-portal = factorioModPortal(FACTORIO_USER, FACTORIO_PASSWORD)
-# I think it is very strage that there is a auth api which we dont need at all...
-# I'll use it to test our credentials for now, at least it has a meaningfull return value istead of html+regex fu*kery
-portal.get_auth_token()
+portal = factorioModPortal(FACTORIO_APIKEY)
 # Start deployment to mod-portal
-portal.login()
 portal.upload_mod(modinfo_name, modinfo_filepath)

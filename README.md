@@ -9,13 +9,9 @@ A sample workflow that uses this action can be found at [nicolas-lang/Factorio.M
 
 ## Inputs
 
-### `factorio_user`
+### `MOD_UPLOAD_API_KEY`
 
-**Required** User that will be used to authenticate to the Factorio mod-portal.
-
-### `factorio_password`
-
-**Required** Password that will be used to authenticate to the Factorio mod-portal.
+**Required** API Key that will be used to authenticate to the Factorio mod-portal.
 
 ## Acknowledgements
 
@@ -24,3 +20,4 @@ Factorio build scripts based on:
 - [Roang-zero1](https://github.com/Roang-zero1)
 - [Nexelas](https://github.com/Nexela)
 - [Shane Madden](https://github.com/shanemadden)
+- [Factorio Wiki](https://wiki.factorio.com/Mod_upload_API)
