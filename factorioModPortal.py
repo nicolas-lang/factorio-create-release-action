@@ -1,5 +1,6 @@
 ﻿import requests
 
+
 class FactorioModPortalError(RuntimeError):
     """Custom Error representing issues with the Factorio mod portal API."""
 

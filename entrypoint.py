@@ -2,11 +2,13 @@ import os
 import os.path
 import re
 import json
-
 from factorioModPortal import FactorioModPortal
+
+
 # ------------------------------------------------------------------------------- #
 class factorioModDeploymentError(RuntimeError):
 	'''Custom Error representing issues with the mod deployment'''
+
 
 # ------------------------------------------------------------------------------- #
 # 	Set up Env
