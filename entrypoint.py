@@ -15,7 +15,7 @@ class factorioModDeploymentError(RuntimeError):
 GITHUB_REPOSITORY_OWNER = os.environ['GITHUB_REPOSITORY_OWNER']
 GITHUB_REPOSITORY = os.environ['GITHUB_REPOSITORY']
 print("Starting Deployment for : %s" % (GITHUB_REPOSITORY))
-FACTORIO_APIKEY = os.environ['MOD_UPLOAD_API_KEY']
+FACTORIO_APIKEY = os.environ['INPUT_MOD_UPLOAD_API_KEY']
 if FACTORIO_APIKEY.isspace() or len(FACTORIO_APIKEY) == 0:
 	raise factorioModDeploymentError("Factorio API key is required for deployment")
 GITHUB_REF = os.environ['GITHUB_REF']
